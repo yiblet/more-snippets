@@ -1,0 +1,147 @@
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+
+priority -50
+
+snippet while "while loop" b
+while (${1:"proposition"})
+{
+	${0}
+}
+endsnippet
+
+snippet str "struct" b
+struct ${1:type} {
+	$0
+};
+endsnippet
+
+snippet typ "typedef" b
+typedef ${1:old_type} ${2:new_type};$0
+endsnippet
+
+snippet arr "allocate array" b
+${1:type}[] ${2:name} = alloc_array($1, ${3:length});
+endsnippet
+
+snippet all "alloc" b
+${1:type}* ${2:name} = alloc($1);
+endsnippet
+
+snippet pr "print" b
+print($0);
+endsnippet
+
+
+snippet print "print int" b
+printint($0);
+endsnippet
+
+snippet prln "println" b
+println($0);
+endsnippet
+
+snippet prel "Description" b
+println("");$0
+endsnippet
+
+snippet uses "get the uses" b
+// Allows you to use I/O functions like print and println
+#use <conio>
+// Allows you to use string functions like string_join
+#use <string>
+// Allows you to use utility functions like abs() and min()
+#use <util>
+
+#use <img>
+#use <parse>
+#use <args>
+endsnippet
+
+
+snippet main "main() (main)"
+int main(int argc, char *argv[])
+{
+	${0}
+	return 0;
+}
+endsnippet
+
+snippet func "function" b
+${1:void} ${2:name}($3)
+{
+	${0}
+	return;
+}
+endsnippet
+
+snippet for "for loop (for)"
+for (${1:i} = ${2:0}; $1 < ${3:count}; ${4:$1++})
+{
+	${0}
+}
+endsnippet
+
+snippet fori "for int loop (fori)"
+for (${1:int} ${2:i} = ${3:0}; $2 < ${4:count}; ${5:$2++})
+{
+	${0}
+}
+endsnippet
+
+snippet if "if clause"
+if (${1:true})
+{
+	${0}
+}
+endsnippet
+
+snippet elif "else if clause"
+else if (${1:true})
+{
+	${0}
+}
+endsnippet
+
+
+snippet el "else clause"
+else {
+	${0}
+}
+endsnippet
+
+snippet wh "while loop" b
+while (${1:"proposition"})
+{
+	${0}
+}
+endsnippet
+
+snippet var "variable declaration" b
+${1:type} ${2:name} = ${3:0};${0}
+endsnippet
+
+snippet req "//@requires"
+//@requires ${1:"proposition"};
+endsnippet
+
+snippet ens "//@ensures"
+//@ensures ${1:"proposition"}
+endsnippet
+
+snippet inv "//@loop_invariant"
+//@loop_invariant ${1:"proposition"};
+endsnippet
+
+snippet ass "//@assert"
+//@assert ${1:"proposition"};
+endsnippet
+
+snippet res "\result"
+\result
+endsnippet
+
+snippet length "\length"
+\length($0)
+endsnippet

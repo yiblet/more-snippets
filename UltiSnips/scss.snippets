@@ -1,0 +1,48 @@
+snippet transition-p "transition-property"
+-webkit-transition-property: $1;
+-moz-transition-property: $1;
+-ms-transition-property: $1;
+-o-transition-property: $1;
+transition-property: ${1:all};
+endsnippet
+
+snippet transition-de "transition-delay"
+-webkit-transition-delay: $1s;
+-moz-transition-delay: $1s;
+-ms-transition-delay: $1s;
+-o-transition-delay: $1s;
+transition-delay: ${1:0}s;
+endsnippet
+
+snippet transition-t "transition-timing-function"
+-webkit-transition-timing-function: $1;
+-moz-transition-timing-function: $1;
+-ms-transition-timing-function: $1;
+-o-transition-timing-function: $1;
+transition-timing-function: ${1:linear};
+endsnippet
+
+snippet transition-du "transition-duration"
+-webkit-transition-duration: $1s;
+-moz-transition-duration: $1s;
+-ms-transition-duration: $1s;
+-o-transition-duration: $1s;
+transition-duration: ${1:1}s;
+endsnippet
+
+snippet rgba "rgba()"
+rgba(${1:255}, ${2:255}, ${3:255}, ${4:1.0})
+endsnippet
+
+
+snippet cubic "cubic-bezier()"
+cubic-bezier(${1:1.0}, ${2:1.0}, ${3:1.0}, ${4:1.0})
+endsnippet
+
+snippet tra "transition"
+-webkit-transition: $1 $2s $3s $4;
+-moz-transition: $1 $2s $3s $4;
+-ms-transition: $1 $2s $3s $4;
+-o-transition: $1 $2s $3s $4;
+transition: ${1:"type"} ${2:"duration"}s ${3:"delay"}s ${4: "timing function"};
+endsnippet
