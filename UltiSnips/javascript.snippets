@@ -6,3 +6,19 @@ endsnippet
 snippet () "anonymous function"
 ($1) => {$2}$0
 endsnippet
+
+snippet else "else statement"
+else {$1}
+endsnippet
+
+snippet clas "class declaration" b
+class $1 ${2:extends $3 }{$0}
+endsnippet
+
+snippet \ "function"
+($1) => {$0}
+endsnippet
+
+snippet log "console.log" b
+console.log($1)
+endsnippet

@@ -1,0 +1,24 @@
+snippet incl "local include" b
+#include "$1"$0
+endsnippet
+
+snippet xmal "xmalloc" b
+${1:type}* ${2:name} = ($1*)xmalloc(sizeof($1));
+endsnippet
+
+
+snippet xmala "xmalloc array" b
+${1:type}* ${2:name} = ($1*)xmalloc(sizeof($1)*${3:size});
+endsnippet
+
+snippet req "requires" b
+REQUIRES($1);
+endsnippet
+
+snippet ens "ensures" b
+ENSURES($1);
+endsnippet
+
+snippet ass "asserts" b
+ASSERTS($1);
+endsnippet
