@@ -1,0 +1,76 @@
+snippet fun "function declaration" b
+fun ${1:name} $2 = $0
+endsnippet
+
+snippet helpers "useful helpers" b
+infixr 0 $
+fun f $ x = f x
+
+fun id x = x
+fun const x y = x
+endsnippet
+
+snippet doc "documentation" b
+(* ${1:name}: ${2:type}
+ * REQUIRES: ${3:true}
+ * ENSURES: ${4:true}
+ *)
+endsnippet
+
+snippet test "test doc" b
+(* tests for $1 *)
+endsnippet
+
+snippet val "val binding" b
+val $1 = $0
+endsnippet
+
+snippet expl "explanation snippet" b
+(* $1
+ * Work: O($2)
+ * Span: O($3) *)
+endsnippet
+
+snippet work "work snippets" b
+(* Work: O($1)
+ * Span: O($2) *)
+endsnippet
+
+snippet wann "work/span annotation"
+(*W: *O($1), S: O($2)*)
+endsnippet
+
+snippet ann "annotation"
+(*$1*)
+endsnippet
+
+snippet case "case expr"
+case $1
+	of $2 => $3
+	 $0
+endsnippet
+
+snippet gr "case guard"
+| $1 => $0
+endsnippet
+
+snippet le "let statement"
+let
+	$0
+in
+end
+endsnippet
+
+snippet str "structure"
+structure $1 =
+struct
+	$0
+end
+endsnippet
+
+snippet sig "signature"
+signature $1 =
+sig
+	$0
+end
+endsnippet
