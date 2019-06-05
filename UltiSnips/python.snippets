@@ -1,5 +1,14 @@
 snippet dol "single line docstring" b
 """$0"""
 endsnippet
-	
 
+snippet abs "absolute imports" b
+from __future__ import absolute_import
+$0
+endsnippet
+
+snippet box "box comment" b
+# `!p snip.rv = ('-' * 78) `
+# `!p snip.rv = ('-' * ((76 - len(t[1])) // 2))` ${1:title} `!p snip.rv = ('-' * ((77 - len(t[1])) // 2))`
+# `!p snip.rv = ('-' * 78) `
+endsnippet

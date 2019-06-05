@@ -2,10 +2,76 @@ snippet code "code"
 \texttt{$1}$0
 endsnippet
 
-snippet br "bracket"
-\\$1{$2}$0
-endsnippet
-
 snippet cr "clearpage" b
 \clearpage
+endsnippet
+
+snippet int "Integral"
+\int
+endsnippet
+
+snippet prod "product"
+\prod
+endsnippet
+
+snippet _ "subscript" iA
+_{$1}$0
+endsnippet
+
+snippet ^ "superscript" iA
+^{$1}$0
+endsnippet
+
+snippet fr "x"
+\frac{${1:${VISUAL}}}{$2}$0
+endsnippet
+
+snippet 'beg?' "begin" br
+\begin{${1:something}}
+${0:${VISUAL}}
+\end{$1}
+endsnippet
+
+snippet $ "math" A
+$ $1 $ $0
+endsnippet
+
+snippet '(\\big+)(\(\)|\[\])' "big" ir
+`!p
+par = '(' if match.group(2) == '()' else '['
+snip.rv = match.group(1) + par
+` ${1:${VISUAL}} `!p
+par = ')' if match.group(2) == '()' else ']'
+snip.rv = match.group(1) + par
+` $0
+endsnippet
+
+
+snippet '\\left(\[\]|\(\))' "left" ir
+`!p
+par = '(' if match.group(1) == '()' else '['
+snip.rv = '\\left' + par
+` ${1:${VISUAL}} `!p
+par = ')' if match.group(1) == '()' else ']'
+snip.rv = '\\right' + par
+` $0
+endsnippet
+
+snippet exp "exponent"
+\exp($1)$0
+endsnippet
+
+snippet bb "bb" i
+\mathbb{${1:${VISUAL}}}$0
+endsnippet
+
+snippet bf "textbf" i
+\textbf{${1:${VISUAL}}}$0
+endsnippet
+
+snippet labeq "equation w/ label"
+\begin{equation}
+	\label{eq:$1}
+	${2:${VISUAL}}
+\end{equation}
 endsnippet
